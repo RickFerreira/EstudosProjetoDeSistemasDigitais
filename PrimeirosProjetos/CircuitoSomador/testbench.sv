@@ -1,13 +1,12 @@
 /*
  * Projeto: Circuito Somador de 8 bits
- * Descrição: Pega o resultado de "a" and "b" e faz um or com a saída invertida de "b"
+ * Descrição: Fazer um circuito somador de 8bits e mostrar o resultado em binário e decimal
  * Autores: Patricia Santos e Richard Ferreira
 */
 
 module main();
   
-  bit [7:0] valor1, valor2;
-  bit [7:0] soma;
+  byte valor1, valor2, soma;
   
   somador(valor1, valor2, soma);
   
@@ -15,10 +14,18 @@ module main();
     valor1 <= 8'b11111100;
     valor2 <= 8'b00000011;
     
-    #1 $display("    A: %b", valor1);
-    #1 $display("    B: %b", valor2);
+    #1 $display("    *************************");
+
+    #1 $display("    A Binario: %b", valor1);
+    #1 $display("    B Binario: %b", valor2);
+    #1 $display("    A Decimal: %d", valor1);
+    #1 $display("    B Decimal: %d", valor2);
+    #1 $display(" ");
     
-    #1 $display("    Soma: %b", soma);
+    #1 $display("    Soma binario: %b", soma);
+    #1 $display("    Soma decimal: %d", soma);
+    
+    #1 $display("    *************************");
     
     $finish;
     
