@@ -2,8 +2,8 @@ module ulaDesign(
     
     input bit clk, crtl_des,
     input bit [2:0] crtl_ula,
-  	input wire [7:0] a, b,
- 	output wire [7:0] c
+    input wire [7:0] a, b,
+    output wire [7:0] c
 
 );
 
@@ -36,8 +36,8 @@ module ulaDesign(
         3'b011: ula <= ra / rb; // Divisão
         3'b100: ula <= ra & rb; // AND bit-a-bit
         3'b101: ula <= ra | rb; // OR bit-a-bit
-        3'b110: ula <= ~ra;    // NOT bit-a-bit de A
-        3'b111: ula <= rb;    // ByPass de B
+        3'b110: ula <= ~ra;     // NOT bit-a-bit de A
+        3'b111: ula <= rb;      // ByPass de B
    
     endcase
     
