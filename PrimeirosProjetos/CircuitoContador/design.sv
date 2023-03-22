@@ -1,17 +1,30 @@
 module contador(
-  input wire clkk, rstt, udd,
-  output reg [7:0] contt
+  input clk, rst, ud,
+  output [7:0] cont
   );
   
-  always @(posedge clkk) 
-    begin
-      if(rstt) begin
-        contt <= 8'b0; //Reinicia do 0
-      end else if(udd == 1) begin
-        contt <= contt + 1; //incrementa
-      end else if(udd == 0) begin
-        contt <= contt - 1; //decrementa
-      end
-    end
+  reg[7:0] cont;
   
-endmodule
+  always_ff @(posedge clk or posedge rst) 
+    begin
+      if(rst) 
+        begin
+          cont <= 8'b0; //Reinicia do 0
+      end 
+
+      else
+        case(ud)
+          0:
+            begin
+            	cont <= cont - 1; //decrementa
+              	$display("Saída =\n   Decimal: %d\n   Binario: %b", cont, cont);
+          end
+          1:
+            begin
+            	cont <= cont + 1; //incrementa
+              	$display("Saída =\n   Decimal: %d\n   Binario: %b", cont, cont);
+          end      
+        endcase
+      end
+  
+endmodule: contador;
