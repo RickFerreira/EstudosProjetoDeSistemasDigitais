@@ -9,10 +9,10 @@ module contadorTestBench;
   wire[7:0] cont;
   
   contador dut(
-     .clkk(clk),
-     .rstt(rst),
-     .udd(ud),
-     .contt(cont)
+     .clk(clk),
+     .rst(rst),
+     .ud(ud),
+     .cont(cont)
   );
   
   initial begin
@@ -20,7 +20,7 @@ module contadorTestBench;
     rst = 1'b1; 
     ud = 1'b0;
      
-    $display("        ***************************************");
+    $display("\n*********************\n");
     
     //Iniciar contador
     #10 rst = 1'b0; //Libera o sinal do reset
@@ -32,13 +32,13 @@ module contadorTestBench;
       #5 clk = ~clk;
       #5 clk = ~clk;
       #5 clk = ~clk;
-      #5 $display("	UP = Decimal: %d  Binario: %b", cont, cont);	
+      	
     
     //Contagem decrescente
     ud = 1'b0;
       #5 clk = ~clk;
       #5 clk = ~clk;
-      #5 $display("	DOWN = Decimal: %d  Binario: %b", cont, cont);
+      
     
     //Reset
       rst = 1'b1;
@@ -46,9 +46,9 @@ module contadorTestBench;
       #10 rst = 1'b0;
       #5 clk = ~clk;
       #5 clk = ~clk;
-      #5 $display("	RESET = Decimal:%d  Binario: %b", cont, cont);
+      
     
-    $display("        ***************************************");
+    $display("\n********************\n");
     
     $finish;//Fim da simulação
   end
