@@ -5,7 +5,7 @@
 */
 
 module contadorTestBench;
-  reg clk = 1'b0, rst, ud;
+  bit[1] clk, rst, ud;
   wire[7:0] cont;
   
   contador dut(
@@ -15,44 +15,25 @@ module contadorTestBench;
      .cont(cont)
   );
   
-  initial begin
-    
-    rst = 1'b1; 
-    ud = 1'b0;
-     
+  initial 
+    begin
     $display("\n*********************\n");
     
-    //Iniciar contador
-    #10 rst = 1'b0; //Libera o sinal do reset
+    clk = 0;
+    #1rst = 0; 
+    #1rst = 1; 
+    #1rst = 0; 
+    ud = 1;
+    #1020 ud = 0;
+    #1024
     
-    //Contagem crescente
-    ud = 1'b1;
-    //Vai alternando o sinal
-      #5 clk = ~clk;  
-      #5 clk = ~clk;
-      #5 clk = ~clk;
-      #5 clk = ~clk;
-      	
-    
-    //Contagem decrescente
-    ud = 1'b0;
-      #5 clk = ~clk;
-      #5 clk = ~clk;
-      
-    
-    //Reset
-      rst = 1'b1;
-      ud = 1'b1;
-      #10 rst = 1'b0;
-      #5 clk = ~clk;
-      #5 clk = ~clk;
-      
-    
-    $display("\n********************\n");
-    
-    $finish;//Fim da simulação
+    $display("\n*********************\n");
+    $finish;
   end
   
-  always #5 clk = ~clk;//Gerar o sinal de clock
+  always 
+    begin
+    #2 clk = ~clk;//Gerar o sinal de clock
+  end
   
 endmodule
