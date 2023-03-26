@@ -6,7 +6,6 @@
 Armazeno aqui todos os projetos feitos por mim, juntamente com Patricia Santos, durante a cadeira de Projeto de Sistemas Digitais. Os códigos são feitos para descrição de hardware e testes no FPGA, usando a linguagem SystemVerilog.
 </h4>    
   
-  
 <p>
 <!-- Image Shields -->
 <img  alt="Language Top"  src="https://img.shields.io/github/languages/top/RickFerreira/EstudosProjetoDeSistemasDigitais">
@@ -26,7 +25,6 @@ Armazeno aqui todos os projetos feitos por mim, juntamente com Patricia Santos, 
 <img src="https://upload.wikimedia.org/wikipedia/en/e/ef/SystemVerilog_logo.png" alt="C" width="200"> &nbsp;
 
 <br>
-
 
 ### 👨🏻‍💻 Team
 
