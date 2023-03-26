@@ -27,6 +27,7 @@ Armazeno aqui todos os projetos feitos por mim, juntamente com Patricia Santos, 
 
 <br>
 
+
 ### 👨🏻‍💻 Team
 
 <table>
