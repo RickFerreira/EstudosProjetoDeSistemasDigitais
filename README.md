@@ -49,6 +49,6 @@ Armazeno aqui todos os projetos feitos por mim, juntamente com Patricia Santos, 
   </tr>
 </table>
 
-[☝🏽 Voltar ao topo](#EstudosProjetoDeSistemasDigitais   )<br>
+[☝🏽 Voltar ao topo](#EstudosProjetoDeSistemasDigitais)<br>
 
 </div>
