@@ -16,7 +16,7 @@ Armazeno aqui todos os projetos feitos por mim, juntamente com Patricia Santos, 
 </p>
 <br>
 
-<img  alt="Wallpaper"  src="http://s.laoyaoba.com/jwImg/1468286441756.959.jpg?width=80%" width="50%">
+<img  alt="Wallpaper"  src="https://cdn.discordapp.com/attachments/459871999943114762/1090793833534591046/fpga.jpg" width="60%">
 
 <br> 
 
